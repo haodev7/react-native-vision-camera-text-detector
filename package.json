@@ -1,6 +1,6 @@
 {
   "name": "react-native-vision-camera-text-detector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React Native Vision Camera plugin for real-time text detection. This package enables seamless integration of on-device OCR by using Google ML Kit on Android and Apple’s Vision Framework on iOS. It provides fast, efficient, and cross-platform text recognition capabilities directly within Vision Camera for React Native apps.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
