@@ -25,7 +25,7 @@ It provides fast, efficient, and cross-platform text recognition capabilities di
 ### 1. Install the plugin
 
 ```bash
-yarn install ./modules/react-native-vision-camera-text-detector
+yarn add react-native-vision-camera-text-detector
 ```
 
 ## Usage
@@ -33,16 +33,16 @@ yarn install ./modules/react-native-vision-camera-text-detector
 ### 1. Importing
 
 ```javascript
-import { detectText } from "react-native-vision-camera-text-detector"
+import { detectText } from 'react-native-vision-camera-text-detector';
 ```
 
 ### 2. Used for frame processor
 
 ```javascript
 const frameProcessor = useFrameProcessor((frame) => {
-  "worklet"
-  const data = detectText(frame)
-  const { text } = data || {}
-  console.log(text)
-}, [])
+  'worklet';
+  const data = detectText(frame);
+  const { text } = data || {};
+  console.log(text);
+}, []);
 ```
