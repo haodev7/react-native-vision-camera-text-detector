@@ -1,6 +1,6 @@
 {
   "name": "react-native-vision-camera-text-detector",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A React Native Vision Camera plugin for real-time text detection. This package enables seamless integration of on-device OCR by using Google ML Kit on Android and Apple’s Vision Framework on iOS. It provides fast, efficient, and cross-platform text recognition capabilities directly within Vision Camera for React Native apps.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
@@ -32,11 +32,10 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-vision-camera-text-detector-example",
     "test": "jest",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
+    "clean": "del-cli android/build lib",
     "prepare": "bob build",
     "release": "release-it --only-version"
   },
@@ -80,17 +79,18 @@
     "react": "19.0.0",
     "react-native": "0.79.2",
     "react-native-builder-bob": "^0.40.11",
+    "react-native-vision-camera": "^4.6.4",
+    "react-native-worklets-core": "^1.5.0",
     "release-it": "^17.10.0",
     "turbo": "^1.10.7",
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-vision-camera": "*",
+    "react-native-worklets-core": "*"
   },
-  "workspaces": [
-    "example"
-  ],
   "packageManager": "yarn@3.6.1",
   "jest": {
     "preset": "react-native",

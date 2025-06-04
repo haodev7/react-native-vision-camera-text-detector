@@ -1,33 +1,48 @@
-# react-native-vision-camera-text-detector
+# react-native-vision-camera-text-recognition
 
-A React Native Vision Camera plugin for real-time text detection. This package enables seamless integration of on-device OCR by using Google ML Kit on Android and Apple’s Vision Framework on iOS. It provides fast, efficient, and cross-platform text recognition capabilities directly within Vision Camera for React Native apps.
+A React Native Vision Camera plugin for real-time text detection.  
+This package enables seamless integration of on-device OCR by using:
 
-## Installation
+- **Google ML Kit** on **Android**
+- **Vision Framework** on **iOS**
 
-```sh
-npm install react-native-vision-camera-text-detector
+It provides fast, efficient, and cross-platform text recognition capabilities directly within Vision Camera.
+
+---
+
+## ✨ Features
+
+- Real-time text recognition
+- On-device processing (no network required)
+- Cross-platform support (Android & iOS)
+- High performance with native APIs
+- Easy integration with `react-native-vision-camera`
+
+---
+
+## 📦 Installation
+
+### 1. Install the plugin
+
+```bash
+yarn install ./modules/react-native-vision-camera-text-detector
 ```
 
 ## Usage
 
+### 1. Importing
 
-```js
-import { multiply } from 'react-native-vision-camera-text-detector';
-
-// ...
-
-const result = multiply(3, 7);
+```javascript
+import { detectText } from "react-native-vision-camera-text-detector"
 ```
 
+### 2. Used for frame processor
 
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+```javascript
+const frameProcessor = useFrameProcessor((frame) => {
+  "worklet"
+  const data = detectText(frame)
+  const { text } = data || {}
+  console.log(text)
+}, [])
+```
