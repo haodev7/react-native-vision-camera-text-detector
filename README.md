@@ -46,3 +46,11 @@ const frameProcessor = useFrameProcessor((frame) => {
   console.log(text);
 }, []);
 ```
+
+## 💖 Support This Project
+
+If you find this library useful and would like to support ongoing development, please consider sponsoring me on GitHub:
+
+👉 [**Become a Sponsor**](https://github.com/sponsors/haodev7)
+
+Your support helps me maintain and improve this project. Thank you! 🙏
