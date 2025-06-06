@@ -92,8 +92,8 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "react-native-vision-camera": "*",
-    "react-native-worklets-core": "*"
+    "react-native-vision-camera": ">= 3",
+    "react-native-worklets-core": "^1.5.0"
   },
   "packageManager": "yarn@3.6.1",
   "jest": {
